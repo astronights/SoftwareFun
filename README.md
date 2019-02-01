@@ -1,3 +1,3 @@
 # SoftwareFun
 
-The group project for CZ2005 Software Engineering
+The group project for CZ2006 Software Engineering
