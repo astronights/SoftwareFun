@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@drawable/background_no_design_2"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <!-- Navigation Bar -->
+    <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            app:menu="@menu/navigation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:itemBackground="@color/colorPrimaryDark" app:itemTextColor="@color/colorLight"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            tools:layout_conversion_absoluteHeight="62dp"
+            tools:layout_conversion_absoluteWidth="411dp"/>
+
+    <TextView
+            android:layout_width="213dp"
+            android:layout_height="52dp"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:hint="today"
+            android:textColor="@color/colorLight"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" android:singleLine="false"
+            android:selectAllOnFocus="false" android:text="Enter Date"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            android:textColor="@color/colorLight"
+            android:id="@+id/editText2"
+            android:hint="right now" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/editText" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
+
+    <ImageButton
+            android:layout_width="49dp"
+            android:layout_height="50dp" tools:srcCompat="@tools:sample/avatars[0]"
+            android:id="@+id/imageButton"
+            android:contentDescription="next_button"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/editText2"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"/>
+    <RadioGroup
+            android:layout_width="224dp"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:id="@+id/radioGroup"
+            android:layout_marginBottom="85dp" app:layout_constraintBottom_toTopOf="@+id/navigation"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
+        <RadioButton
+                android:text="Depart At"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButton2" android:layout_weight="1"/>
+        <RadioButton
+                android:text="Arrive By"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButton3" android:layout_weight="1"/>
+    </RadioGroup>
+
+
+</android.support.constraint.ConstraintLayout>

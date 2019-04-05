@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@drawable/background_no_design_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <!-- Navigation Bar -->
+    <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            app:menu="@menu/navigation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:itemBackground="@color/colorPrimaryDark" app:itemTextColor="@color/colorLight"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            tools:layout_conversion_absoluteHeight="62dp"
+            tools:layout_conversion_absoluteWidth="411dp"/>
+
+    <TextView
+            android:text="Where do you want to go?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorLight"
+            android:id="@+id/title" android:textSize="30sp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/navigation" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="85dp" android:fontFamily="@font/cabin_semibold"
+            app:layout_constraintHorizontal_bias="0.49" app:layout_constraintVertical_bias="0.252"/>
+    <EditText
+            android:text="@string/start"
+            android:layout_width="261dp"
+            android:textColor="@color/colorLight"
+            android:layout_height="wrap_content"
+            android:id="@+id/origin"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            android:hint="I'm starting from..." app:layout_constraintStart_toEndOf="@+id/imageView"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.282" android:fontFamily="@font/cabin_semibold"/>
+    <MultiAutoCompleteTextView
+            android:text="@string/end"
+            android:layout_width="261dp"
+            android:textColor="@color/colorLight"
+            android:layout_height="wrap_content"
+            android:id="@+id/destination"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/origin"
+            android:hint="I'm going to..." app:layout_constraintStart_toEndOf="@+id/imageView2"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.263" android:fontFamily="@font/cabin_semibold"/>
+    <ImageView
+            android:layout_width="39dp"
+            android:layout_height="48dp" app:srcCompat="@drawable/ic_start_location"
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/origin"
+            app:layout_constraintBottom_toBottomOf="@+id/origin"
+            app:layout_constraintStart_toStartOf="@+id/imageView2" app:layout_constraintVertical_bias="0.0"
+    />
+    <ImageView
+            android:layout_width="40dp"
+            android:layout_height="48dp" app:srcCompat="@drawable/ic_end_location"
+            android:id="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="56dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/destination"
+            app:layout_constraintTop_toTopOf="@+id/destination"
+            app:layout_constraintVertical_bias="0.9"/>
+    <ImageView
+            android:layout_width="52dp"
+            android:layout_height="46dp" app:srcCompat="@drawable/ic_next_arrow"
+            android:id="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/navigation" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/title" app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.361"/>
+</android.support.constraint.ConstraintLayout>
